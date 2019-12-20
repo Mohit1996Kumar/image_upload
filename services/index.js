@@ -1,0 +1,1 @@
+exports.imageService = require('./image')

@@ -1,0 +1,1 @@
+exports.image_upload = require('./image_upload').upload_image

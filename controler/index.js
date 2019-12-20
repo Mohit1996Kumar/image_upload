@@ -1,0 +1,2 @@
+exports.imageController = require('./image')
+
