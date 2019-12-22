@@ -1,5 +1,5 @@
 let services = require('../services/index')
-let responses = require('../commonFunctions.js/responses')
+let responses = require('../commonFunctions/responses')
 let constants = require('../constants')
 const fs = require("fs");
 var ExifImage = require('exif').ExifImage;

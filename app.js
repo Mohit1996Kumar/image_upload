@@ -8,6 +8,7 @@ const connection = require('./db_connection/mongo')
 let controler = require('./controler')
 const upload = multer({ dest: './uploads/' });
 const CONSTANTS = require('./constants')
+const validation = require('./validation/image')
 
 //app intance
 let app = express()
@@ -19,7 +20,7 @@ app.use(express.static('public'));
 
 //APIs
 app.get('/home', controler.imageController.welcomePage)
-app.post('/upload_image', upload.single("file"), controler.imageController.insertImage)
+app.post('/upload_image', upload.single("file"), validation.insertImageSchema, controler.imageController.insertImage)
 app.get('/get_image', controler.imageController.findImage)
 
 //Running Server
